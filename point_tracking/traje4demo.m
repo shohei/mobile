@@ -38,9 +38,9 @@ while(y<yt)
     
     xlabel('[cm]'); ylabel('[cm]');
     axis equal; axis([-300,300,-100,500]);grid;
+    legend('Target','','','Point tracking method');
     drawnow;
 end
-    legend('Target','Point tracking method');
 
 
 big;
