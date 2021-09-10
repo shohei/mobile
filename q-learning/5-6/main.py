@@ -4,7 +4,6 @@ from maze import Maze
 x_size = 10
 y_size = 9
 
-
 if __name__=="__main__":
     maze = Maze(x_size, y_size)
     map = maze.map
