@@ -1,6 +1,7 @@
 import numpy as np
 import random
 
+
 def epsilon_greedy(epsilon, s, num_a, Qtable):
     if epsilon > random.random():
         max_a = random.randint(0,num_a-1)
