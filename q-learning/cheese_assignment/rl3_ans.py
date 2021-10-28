@@ -5,8 +5,8 @@ def select_action(s, Qtable):
     Qtable_s = Qtable[s,:]
     maxQ = Qtable_s.max()
     max_as = np.where(Qtable_s==maxQ)[0].tolist()
-    max_a = random.choice(max_as)
-    return maxQ, max_a 
+    a = random.choice(max_as)
+    return a 
 
 if __name__=="__main__":
     num_a = 5
@@ -18,7 +18,7 @@ if __name__=="__main__":
     Qtable[5][1] = 9 
     
     for s in range(num_s):
-        maxQ, a = select_action(s, Qtable)
+        a = select_action(s, Qtable)
         print(f"s={s}, a={a}")
 
 # Expected result

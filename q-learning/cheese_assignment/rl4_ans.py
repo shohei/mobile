@@ -7,7 +7,7 @@ def epsilon_greedy(epsilon, s, num_a, Qtable):
     if epsilon > random.random():
         a = random.randint(0,num_a-1)
     else:
-        _, a = select_action(s, Qtable)
+        a = select_action(s, Qtable)
     return a 
 
 if __name__=="__main__":

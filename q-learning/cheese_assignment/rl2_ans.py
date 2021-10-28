@@ -3,8 +3,7 @@ import numpy as np
 def max_Qval(s, Qtable):
     Qtable_s = Qtable[s,:]
     maxQ = Qtable_s.max()
-    max_as = np.where(Qtable_s==maxQ)[0].tolist()
-    return maxQ, max_as 
+    return maxQ
 
 if __name__=="__main__":
     num_s = 5
@@ -13,8 +12,8 @@ if __name__=="__main__":
     
     Qtable[3][2] = 9
     Qtable[3][4] = 6 
-    maxQ, max_as = max_Qval(3, Qtable)
-    print(f"max Q={maxQ}, actions={max_as}")
+    maxQ = max_Qval(3, Qtable)
+    print(f"max Q={maxQ}")
 
 # Expected result
-# max Q=9.0, actions=[2]
+# max Q=9.0
